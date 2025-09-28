@@ -18,9 +18,6 @@ export type MouseOrTouchEventState = {
   // initialPosition: TopLeftPosition;
 };
 
-
-// Todo: rename to MouseOrTouchEventTargetType, but first
-//  figure out if touch events are able to merge with mouse events
 export type MouseEventHandlers = {
   onMouseDown: (mouseDownEvent: ReactMouseOrTouchEvent) => void;
 };

@@ -52,6 +52,7 @@ function App() {
         background: 'silver',
       }}
       {...controllerEventsHandlers}
+      onTouchStart={controllerEventsHandlers.onMouseDown}
     >
       <Navigatio
         viewportPosition={viewportPosition}
