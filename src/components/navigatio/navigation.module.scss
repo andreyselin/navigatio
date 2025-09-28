@@ -1,0 +1,27 @@
+.navigatioContainer {
+  touch-action: none;
+
+  position: absolute;
+  inset: 0;
+}
+
+.navigatioViewport {
+  touch-action: none;
+
+  background: lightblue;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  cursor: grab;
+}
+
+
+.navigatioCanvas {
+  touch-action: none;
+
+  background: green;
+  width: 0;
+  height: 0;
+
+  position: absolute;
+}
