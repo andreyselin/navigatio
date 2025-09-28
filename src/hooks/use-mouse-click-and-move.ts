@@ -1,7 +1,12 @@
 import { useRef } from 'react';
 
 import type { TopLeftPosition } from '../types/geometric.types';
-import type { MouseEventHandlers, MouseOrTouchEvent, MouseOrTouchEventState } from '../types/controller.types';
+import type {
+  MouseEventHandlers,
+  MouseOrTouchEvent,
+  MouseOrTouchEventState,
+  ReactMouseOrTouchEvent
+} from '../types/controller.types';
 import { getMouseOrTouchEventPosition, getIsTouchEvent } from '../utilities/controller.utilities';
 
 const defaultState: MouseOrTouchEventState = {
@@ -73,7 +78,9 @@ export function useMouseClickAndMove({
     }
   }
 
-  function onMouseDown (mouseDownEvent: MouseOrTouchEvent) {
+  function onMouseDown (reactMouseDownEvent: ReactMouseOrTouchEvent) {
+    const mouseDownEvent = reactMouseDownEvent.nativeEvent;
+
     const isTouchEvent = getIsTouchEvent(mouseDownEvent);
 
     if (!isTouchEvent) {
@@ -99,5 +106,8 @@ export function useMouseClickAndMove({
     }
   }
 
-  return { onMouseDown }
+  // These have to be ReactMouseEvent-based since they are assigned through JSX
+  return {
+    onMouseDown
+  }
 }

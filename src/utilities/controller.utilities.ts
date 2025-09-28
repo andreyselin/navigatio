@@ -4,7 +4,9 @@ export function getIsTouchEvent(event: MouseEvent | TouchEvent): event is TouchE
   return 'touches' in event;
 }
 
-export function getMouseOrTouchEventPosition(event: MouseEvent | TouchEvent): TopLeftPosition {
+export function getMouseOrTouchEventPosition(
+  event: MouseEvent | TouchEvent
+): TopLeftPosition {
   return getIsTouchEvent(event)
     ? {
       top: event.touches[0].clientY,
