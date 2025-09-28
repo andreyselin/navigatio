@@ -1,9 +1,9 @@
-import { useRef, useState } from 'react';
+import { FC, useRef, useState } from 'react';
 
 import type { TopLeftPosition } from './types/geometric.types.ts';
 import type { MouseOrTouchEvent } from './types/controller.types.ts';
 
-import { useMouseClickAndMove } from './hooks/use-mouse-click-and-move.ts';
+import { useMouseClickAndMove } from './hooks/use-mouse-click-and-move';
 import { Navigatio } from './components/navigatio';
 
   /* * * * */
@@ -11,7 +11,7 @@ import { Navigatio } from './components/navigatio';
   /* * * * */
   /* * * * */
 
-function App() {
+export const App: FC = () => {
   const viewportRef = useRef<HTMLDivElement>(null);
   const [viewportPosition, setViewpointPosition] = useState<TopLeftPosition>({
     top: 50,
@@ -46,8 +46,8 @@ function App() {
     <div
       style={{
         position: 'relative',
-        width: '500px',
-        height: '500px',
+        width: '100dvw',
+        height: '100dvh',
         overflow: 'hidden',
         background: 'silver',
       }}
@@ -73,5 +73,3 @@ function App() {
     </div>
   )
 }
-
-export default App

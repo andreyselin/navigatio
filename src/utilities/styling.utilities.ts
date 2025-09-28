@@ -1,4 +1,4 @@
-import type { TopLeftPosition } from '../types/basic.types.ts';
+import { TopLeftPosition } from '../types/geometric.types';
 
 export function positionToStyle(position: TopLeftPosition): { top: string; left: string; } {
   return {

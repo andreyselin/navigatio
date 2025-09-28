@@ -1,7 +1,7 @@
 import type { FC, ReactNode, RefObject } from 'react';
 
-import type { TopLeftPosition } from '../../types/basic.types.ts';
-import { positionToStyle } from '../../utilities/styling.utilities.ts';
+import type { TopLeftPosition } from '../../types/geometric.types';
+import { positionToStyle } from '../../utilities/styling.utilities';
 
 import styles from './navigation.module.scss';
 

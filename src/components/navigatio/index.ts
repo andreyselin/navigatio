@@ -1,1 +1,1 @@
-export * from './navigatio.tsx';
+export * from './navigatio';

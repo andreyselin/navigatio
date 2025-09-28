@@ -411,7 +411,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jridgewell/sourcemap-codec@npm:^1.4.14, @jridgewell/sourcemap-codec@npm:^1.5.0":
+"@jridgewell/sourcemap-codec@npm:^1.4.14, @jridgewell/sourcemap-codec@npm:^1.5.0, @jridgewell/sourcemap-codec@npm:^1.5.5":
   version: 1.5.5
   resolution: "@jridgewell/sourcemap-codec@npm:1.5.5"
   checksum: c2e36e67971f719a8a3a85ef5a5f580622437cc723c35d03ebd0c9c0b06418700ef006f58af742791f71f6a4fc68fcfaf1f6a74ec2f9a3332860e9373459dae7
@@ -2092,6 +2092,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"magic-string@npm:^0.30.17":
+  version: 0.30.19
+  resolution: "magic-string@npm:0.30.19"
+  dependencies:
+    "@jridgewell/sourcemap-codec": ^1.5.5
+  checksum: f360b87febeceddb35238e55963b70ef68381688c1aada6d842833a7be440a08cb0a8776e23b5e4e34785edc6b42b92dc08c829f43ecdb58547122f3fd79fdc7
+  languageName: node
+  linkType: hard
+
 "make-fetch-happen@npm:^14.0.3":
   version: 14.0.3
   resolution: "make-fetch-happen@npm:14.0.3"
@@ -2260,6 +2269,7 @@ __metadata:
     globals: ^16.4.0
     react: ^19.1.1
     react-dom: ^19.1.1
+    rollup-plugin-dts: ^6.2.3
     sass-embedded: ^1.93.2
     scss: ^0.2.4
     typescript: ~5.8.3
@@ -2584,6 +2594,22 @@ __metadata:
   bin:
     rolldown: bin/cli.mjs
   checksum: b3bf792da812972d6776b6936486806ef763efd4c9874bf7f1a6e6f5718207f1512eef2490e23717f81126582e500216c7a2bc8a0f38501ecaad22584a0366f1
+  languageName: node
+  linkType: hard
+
+"rollup-plugin-dts@npm:^6.2.3":
+  version: 6.2.3
+  resolution: "rollup-plugin-dts@npm:6.2.3"
+  dependencies:
+    "@babel/code-frame": ^7.27.1
+    magic-string: ^0.30.17
+  peerDependencies:
+    rollup: ^3.29.4 || ^4
+    typescript: ^4.5 || ^5.0
+  dependenciesMeta:
+    "@babel/code-frame":
+      optional: true
+  checksum: 0ba1face5472df7dbc7fc88c1ed2f4a51b6882ad838bbb00250f418278e9e46de3c30c3d536bd0011ba887e98fb82e6c68bd9d3375ec54e7d8c3b500fa77d797
   languageName: node
   linkType: hard
 
