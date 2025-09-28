@@ -1,8 +1,6 @@
 import { FC, useRef, useState } from 'react';
 
-import type { TopLeftPosition } from './types/geometric.types.ts';
-import type { MouseOrTouchEvent } from './types/controller.types.ts';
-
+import type { MouseOrTouchEvent, TopLeftPosition } from './types';
 import { useMouseClickAndMove } from './hooks/use-mouse-click-and-move';
 import { Navigatio } from './components/navigatio';
 

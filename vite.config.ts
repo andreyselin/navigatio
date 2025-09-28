@@ -3,28 +3,20 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
+  plugins: [react()],
   build: {
     lib: {
-      entry: "src/index.ts",
-      name: "navigatio",
-      formats: ["es", "cjs"],
-      fileName: (format) => (format === "es" ? "index.js" : "index.cjs")
+      entry: 'src/index.ts',
+      formats: ['es'],           // только ESM для браузера
+      fileName: () => 'index.js'
     },
     rollupOptions: {
-      external: ["react", "react-dom", "react/jsx-runtime"],
-      output: {
-        exports: "named"
-      }
+      external: [
+        'react',
+        'react-dom',
+        /^react\/.*/             // jsx-runtime и пр.
+      ]
     },
-    sourcemap: true,
-    emptyOutDir: true,
-    outDir: "dist"
-  },
-  plugins: [
-    react({
-      babel: {
-        plugins: [['babel-plugin-react-compiler']],
-      },
-    }),
-  ],
+    sourcemap: true
+  }
 })
